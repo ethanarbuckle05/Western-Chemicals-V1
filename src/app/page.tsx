@@ -6,7 +6,7 @@ export default function Home() {
       style={{
         position: "relative",
         width: "100vw",
-        height: "100vh",
+        height: "100dvh",
         overflow: "hidden",
         fontFamily: "'Playfair Display', serif",
       }}
@@ -17,7 +17,7 @@ export default function Home() {
         fill
         priority
         quality={90}
-        style={{ objectFit: "cover", objectPosition: "center" }}
+        style={{ objectFit: "cover", objectPosition: "left top" }}
       />
 
       <div
@@ -26,10 +26,11 @@ export default function Home() {
           zIndex: 2,
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           alignItems: "center",
           height: "100%",
-          padding: "2rem",
+          padding: "1.5rem",
+          paddingBottom: "calc(100dvh / 6)",
           textAlign: "center",
         }}
       >
@@ -38,10 +39,11 @@ export default function Home() {
             fontFamily: "'Playfair Display', serif",
             fontSize: "clamp(1.16rem, 3.34vw, 2.16rem)",
             fontWeight: 700,
-            color: "#000000",
+            color: "#ffffff",
             lineHeight: 1.2,
-            maxWidth: "454px",
-            marginBottom: "2rem",
+            maxWidth: "min(454px, 90vw)",
+            marginBottom: "1.5rem",
+            textShadow: "0 2px 12px rgba(0,0,0,0.4)",
             letterSpacing: "-0.01em",
           }}
         >
@@ -49,17 +51,36 @@ export default function Home() {
         </h1>
 
         <a
-          href="mailto:jaredwest@westernchemicals.com?subject=Inquiry%20—%20Western%20Chemicals"
+          href="mailto:jared@westernchemicals.com?subject=Inquiry%20—%20Western%20Chemicals"
           style={{
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,
-            fontSize: "clamp(0.66rem, 1.66vw, 0.84rem)",
-            color: "#000000",
+            fontSize: "clamp(0.75rem, 1.66vw, 0.84rem)",
+            color: "#ffffff",
             textDecoration: "none",
+            textShadow: "0 2px 12px rgba(0,0,0,0.4)",
             cursor: "pointer",
+            minHeight: "44px",
+            display: "inline-flex",
+            alignItems: "center",
           }}
         >
-          Give us a holler
+          Give us a holler!
+        </a>
+        <a
+          href="mailto:jared@westernchemicals.com?subject=Inquiry%20—%20Western%20Chemicals"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 400,
+            fontSize: "clamp(0.6rem, 1.33vw, 0.7rem)",
+            color: "#ffffff",
+            textDecoration: "none",
+            textShadow: "0 2px 12px rgba(0,0,0,0.4)",
+            cursor: "pointer",
+            marginTop: "0.5rem",
+          }}
+        >
+          jared@westernchemicals.com
         </a>
       </div>
 
@@ -75,7 +96,7 @@ export default function Home() {
         <span
           style={{
             fontSize: "0.7rem",
-            color: "rgba(0,0,0,0.4)",
+            color: "rgba(255,255,255,0.45)",
             fontFamily: "'Playfair Display', serif",
             letterSpacing: "0.05em",
           }}
